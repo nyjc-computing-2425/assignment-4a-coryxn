@@ -2,11 +2,7 @@ nric = input('Enter an NRIC number: ')
 nric_num = nric[1:-1]
 nric = nric.upper()
 
-if len(nric) != 9:
-  print('NRIC is invalid.')
-elif not nric[0] in "STFG":
-  print('NRIC is invalid.')
-elif not nric_num.isdigit():
+if len(nric) != 9 or not nric[0] in "STFG" or not nric_num.isdigit():
   print('NRIC is invalid.')
 else:
   
